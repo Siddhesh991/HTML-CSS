@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         html,body{
+            overflow-x:hidden;
+            height: 100%;
+        }
+        body{
+            background: #fff;
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        .header{
+            display:block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 100%;
+            box-shadow: none;
+            background-color: #FC466B;
+            position: fixed;
+            height: 60px!important;
+            overflow: hidden;
+            z-index: 10;
+        }
+        .main {
+            margin: 0 auto;
+            display:block;
+            height: 100%;
+            margin-top: 60px;
+            
+        }
+        .maininner{
+            display:table;
+            height:100%;
+            width:100%;
+            text-align:center;
+            margin: 0 auto;
+            background-color: #FC466B
+        }
+        .maininner div{
+            height: 300px;
+            width: 2000px;
+            border: 1px solid;
+            border-style:dotted ,red;
+            display: table-cell;
+            vertical-align: middle;
+            font-size: 2em;
+            background-color:rgba(#FC466B);
+                        font-weight: bold;
+            letter-spacing: 1.25px ;
+        }
+       #sidebarmenu{
+            height: 100%;
+            position: fixed;
+            left: 0%;
+            width: 250px;
+            margin-top: 60px;
+            transform: translateX(-250px);
+            transition: transform 250ms ease-in-out;
+            background: linear-gradient(180deg,#FC466B 0%,#3F5EFB 100%);
+
+        }
+        .sidebarmenuinner{
+            margin: 0;
+            padding: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.10)
+            ;
+        }
+        .sidebarmenuinner li{
+            list-style: none;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 20px;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(255,255,255, 0.10);
+        }
+        .sidebarmenuinner li span{
+            display: block;
+            font-size: 14px;
+            color: #130d0e;
+
+        }
+        .sidebarmenuinner li a{
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        input[type="checkbox"]:checked ~#sidebarmenu{
+            transform: translateX(0);
+
+        }
+        input[type=checkbox]{
+            transition: all 0.3s;
+            box-sizing: border-box;
+            display: none;
+        }
+        .sidebaricontoggle{
+            transition: all 0.3s;
+            box-sizing: border-box;
+            cursor: pointer;
+            position: absolute;
+            z-index: 99;
+            height: 100%;
+            width: 100%;
+            top: 22px;
+            left: 22px;
+            height: 22px;
+            width: 22px;
+
+        }
+        .spinner{
+            transition: all 0.3s;
+            box-sizing: border-box;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background-color: #fff;
+            
+        }
+        .horizontal
+        {
+            transition: all 0.3s;
+            box-sizing: border-box;
+            position: relative;
+            float: left;
+            margin-top: 3px;
+        }
+        .diagonal part-1{
+            position: relative;
+            transition: all 0.3s;
+            box-sizing: border-box;
+            float: left;
+        }
+        .diagonal part-2{
+            transition: all 0.3s;
+            box-sizing: border-box;
+            position: relative;
+            float: left;
+            margin-top: 3px;
+        }
+        input[type=checkbox]:checked~.sidebaricontoggle>.horizontal{
+            transition: all 0.3s;
+            box-sizing: border-box;
+            opacity: 0;
+        }
+        input[type=checkbox];:checked~.sidebaricontoggle>.diagonal part-1{
+            transition:all 0.3s;
+            box-sizing: border-box;
+            transform: rotate(135deg);
+            margin-top: 8px;
+        }
+        input[type=checkbox]:checked~.sidebaricontoggle>.diagonal part-2{
+            transition: all 0.3s;
+            box-sizing: border-box;
+            transform: rotate(-135deg);
+            margin-top: -9px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div  class="header"></div>
+    <input type="checkbox" class="opensidebarmenu" id="opensidebarmenu">
+    <label for="opensidebarmenu" class="sidebaricontoggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+</label>
+<div id="sidebarmenu">
+    <ul class="sidebarmenuinner">
+        <li>SIDDHESH THOMBARE <span> WEB DEVP </span></li>
+        <li><a href="https://google.com" target="_blank">GOOGLE  </a> </li>
+        <li><a href="https://instagram.com" target="_blank">INSTA</a></li>
+        <li><a href="https://twitter.com" target="_blank">TWITTER</a></li>
+        <li><a href="https://linkdine.com" target="_blank">LINKDINE</a></li>
+    </ul>
+</div>
+<div id="center" class="maincenter">
+    <div class="maininner">
+        <div> WELCOME TO SIDDHESH THOMBARES SOCIAL MEDIA PAGE</div>
+
+    </div>
+    <!-- <center><img src="../obama.gif" alt="" ></center> -->
+        <div class="maininner">
+            <div>PLZ SELECT YOUR OPTION </div>
+                </div>
+
+    
+</div>
+</body>
+</html>
